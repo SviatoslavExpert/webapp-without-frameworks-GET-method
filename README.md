@@ -17,19 +17,28 @@ Initial
 
 MainServlet code
 
-1. Variable PrintWriter writer gets the link to PrintWriter object.
+1. PrintWriter prints text data (strings in this case) to a character stream (text-output stream). 
+    (PrintWriter is buffered.)
 
-2. PrintWriter object is returned by getWriter() method and is in stored in variable resp.  
-   (getWriter() works like a getter; getWriter() returns a PrintWriter object)
-   
-3. 
+2. .getWriter method is called for the response object.
+
+3. .getWriter method returns a PrintWriter object (that can send character text to the client).   
+
+4. The response obj gets the stream on which the output is written.
+
 
 
 
 Notes:
+
+PrintWriter prints formatted representations of objects to a text-output stream.
 
 getWriter() returns a PrintWriter object
 
 a PrintWriter object that can return character data to the client
 
 https://docs.oracle.com/javaee/7/api/javax/servlet/ServletResponse.html
+
+https://docs.oracle.com/javase/7/docs/api/java/io/PrintWriter.html
+
+https://stackoverflow.com/questions/25780467/what-is-printwriter-out-response-getwriter-in-servlet
